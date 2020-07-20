@@ -256,10 +256,10 @@ NULL
 class(5)
 is.na(NA)
 is.na(5)
-
 is.character(5)
+is.logical(TRUE)
 
-## Type conversions
+## Explicit conversions
 
 as.character(5)
 as.numeric("5")
@@ -267,4 +267,21 @@ as.numeric("5")
 as.character(TRUE)
 as.numeric(TRUE)
 as.numeric("five")
-###
+as.numeric("5.000")
+as.logical(5)
+as.logical(-210)
+as.logical("ghuas")
+
+
+## Implicit conversion
+
+abs("five")
+abs("5")
+
+## works
+c(1, 2, 3, 5, "hello")
+
+as.numeric(TRUE)
+as.numeric("float")
+
+(logicals) == (numbers) -> "character"
