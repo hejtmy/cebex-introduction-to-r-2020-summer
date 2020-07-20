@@ -20,3 +20,18 @@ This course is aimed at people with little to no knowledge of programming in R l
 https://discord.gg/8P9Nwd
 
 ## External resources
+
+### Package sources
+https://rdrr.io/
+https://www.r-pkg.org/
+
+### Getting help
+0. R help (?, help())
+1. Google
+2. https://stackoverflow.com/
+
+[Tips for good questions - how to ask for help](https://www.r-bloggers.com/three-tips-for-posting-good-questions-to-r-help-and-stack-overflow/)
+
+[Minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+[Minimal example in R](https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example)
+[Example of a good question](https://stackoverflow.com/questions/9508518/why-are-these-numbers-not-equal)
