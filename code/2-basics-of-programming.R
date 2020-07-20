@@ -169,6 +169,8 @@ condition <- test_result > 100
 condition
 
 
+## Complex data types
+
 ### Vector
 number <- 1
 length(number)
@@ -176,8 +178,6 @@ length(number)
 numbers <- 1:10
 class(numbers)
 length(numbers)
-
-## Complex data types
 
 ### List
 me <- list(name="Lukas", age=30, teaching=TRUE)
@@ -199,7 +199,12 @@ me$age
 me$teaching
 
 ### Task - Setup a list
-year <- list()
+year <- list(n_days = 365,
+             n_weeks = 52,
+             n_months = 12,
+             favorite_month = "December",
+             favorite_day = "Saturday",
+             good_year = FALSE)
 #n_days (num)
 #n_weeks (num)
 #n_months (num)
@@ -207,14 +212,59 @@ year <- list()
 #favorite_day (char)
 #good_year (logical)
 
-days_10_years <- 10 * .....
-weeks_in_year <- round(...../....., 0)
-favorite_january <- ..... == "January"
-favorite_Monday <- ..... == "Monday"
+days_10_years <- 10 * year$n_days
+weeks_in_year <- round(year[["n_days"]]/7, 0)
+favorite_january <- year[["favorite_month"]] == "January"
+favorite_Monday <- year$favorite_day == "Monday"
 
+year$n_months <- 13
+year$n_days_in_week <- 7
 
-cty_man_aov <- aov(cty ~ manufacturer, mpg)
-cty_man_aov$coefficients
-
+# Basic renaming
+year$number_of_months <- year$n_months
+year$n_months <- NULL
 
 ### Data Frame
+# Nothing more than list of vectors
+class(mpg)
+head(mpg)
+class(mpg$year)
+mpg$cyl
+
+## Factors
+# are character vectors recoded as integers
+f_manufacturer <- factor(mpg$manufacturer)
+as.numeric(mpg$manufacturer)
+as.numeric(f_manufacturer)
+levels(f_manufacturer)
+
+## Missing values
+out <- abs("hello")
+NA <- "North America"
+
+vec <- 1:100
+person1 <- 132
+person2 <- 999
+mean(c(person2, person1))
+person2 <- NA
+mean(c(person2, person1), na.rm = TRUE)
+
+NULL
+
+
+## What type it is
+class(5)
+is.na(NA)
+is.na(5)
+
+is.character(5)
+
+## Type conversions
+
+as.character(5)
+as.numeric("5")
+
+as.character(TRUE)
+as.numeric(TRUE)
+as.numeric("five")
+###
