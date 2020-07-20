@@ -30,10 +30,11 @@ c. It is erroring out, returns values above 1.
 Formulate proper questions with minimal working example, which you would post on stack overflow forums. Include all necessary information. If unsure about something, make it up :)
 
 ### Code style
-Study the https://style.tidyverse.org/ 
+Study the https://style.tidyverse.org/ section 1. and section 2.
 
 Name the file [name]-code-style.R
-1. Prepare the following examples and mix correct and incorrect together. We will go over some of them tomorrow. 
+
+1. Prepare the following examples and mix correct and incorrect together. We will go over some of them tomorrow.
     a. Prepare 5 examples of correct and incorrect names for files. 
     b. Prepare 5 examples of correct and incorrect names for variables. 
     c. Prepare 5 exmaples of correct and incorrect spacing rules in relation to commas, parentheses and operators (+,/ etc.).

@@ -5,8 +5,8 @@ c()
 numbers <- c(1, 8, -5, 1, 0, 3.4, 1000)
 c(numbers, numbers)
 
-numbers1 <- c(0,2,4,6,8,10,12,14,16,18,20)# even numbers from 0-20
-numbers2 <- c(1,3,5,7,9,11,13,15,17,19)# odd number from 1-19
+numbers1 <- c(0,2,4,6,8,10,12,14,16,18,20) # even numbers from 0-20
+numbers2 <- c(1,3,5,7,9,11,13,15,17,19) # odd number from 1-19
 
 all_numbers <- c(numbers1, numbers2)
 
@@ -38,6 +38,8 @@ condition
 # Create vector temperatures of human temperature from 36.3 to 40.5 with 0.1 steps
 # create vector roulette_numbers with numbers from 0 to 36
 # Create vector called roulette_colors with “green” and then 18 times “red” and “black”
+
+roulette_colors <- c("green", rep(c("red", "black"), 18))
 # create vector called weekdays with each day of the week
 # create vector called weekdays_10 which is days in 10 weeks consecutively
 # Crete vector of odd numbers call odd_numbers with numbers from 1 to 99

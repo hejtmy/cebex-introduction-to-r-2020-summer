@@ -278,7 +278,7 @@ as.logical("ghuas")
 abs("five")
 abs("5")
 
-## works
+## w
 c(1, 2, 3, 5, "hello")
 
 as.numeric(TRUE)
