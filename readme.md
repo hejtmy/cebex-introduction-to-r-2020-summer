@@ -6,14 +6,17 @@ This course is aimed at people with little to no knowledge of programming in R l
 
 |Day   | Topic               | Content |
 |----- | ------------------- | ----------------- |
-|Day 1 | Introduction to R   | |
+|Day 1 | Introduction to R   | What is R, how to install, hot to get around|
 |Day 1 | Basics of Programming  | |
 |Day 1 | Working with variables | |
 |Day 2 | Working with vectors | |
 |Day 2 | Workign with data.frames | |
 |Day 2 | Loading and saving data | |
-|Day 3 | ♪Introduction to visualisations | |
+|Day 3 | Introduction to visualisations | |
 |Day 3 | Basic descriptive statistics and data reporting | |
 
+
+## Discord server
+https://discord.gg/8P9Nwd
 
 ## External resources
