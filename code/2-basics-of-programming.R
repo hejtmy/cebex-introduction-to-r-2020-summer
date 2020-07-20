@@ -1,6 +1,5 @@
 ## cleaning up the environment
 
-
 ## Stripping whitespace
 # R doesn't care about whitespace
 5 * 5
@@ -42,7 +41,7 @@ MI6agent <- "James Bond"
 5* 5
 5+6 <- "eleven"
 
-## What i cannot use in variable names
+## What we cannot use in variable names
 ### Math symbols
 one+two <- "Three"
 one <- 1
@@ -64,13 +63,11 @@ one+two
 ### Hashtag
 twitter#myspace <- "nice"
 
-
 ## R is case sensitive
 number <- 5
 Number <- 10
 NUMBER <- 15
 number == Number
-
 
 ## Task
 ## Create 5 incorrect variables and 5 correctly named variables
@@ -107,4 +104,117 @@ hist(rnorm(1000, 0, 1), breaks = 20)
 hist(rnorm(1000, 100, 1), breaks = 20)
 hist(rnorm(1000, 100, 25), breaks = 20)
 hist(rnorm(1000, 100, 25, 10), breaks = 20) #FAILS because only takes 3 arguments
+
+## Default arguments
+# rnorm(n, mean = 0, sd = 1)
 hist(rnorm(1000), breaks=20)
+# mean = 0, sd = 25
+hist(rnorm(1000, 0, 25), breaks=20)
+hist(rnorm(1000, mean = 0, sd = 25), breaks=20)
+hist(rnorm(1000, sd = 25), breaks=20)
+
+# mean = 100, sd = 1
+hist(rnorm(1000, 100, 1), breaks=20)
+hist(rnorm(1000, mean = 100, sd = 1), breaks=20)
+hist(rnorm(1000, mean = 100), breaks=20)
+
+hist(rnorm(1000, sd=25), breaks=20)
+hist(rnorm(1000, 0, 25), breaks=20)
+
+seq(1,10,1)
+seq(from = 1,to = 10, by = 1)
+
+##
+library(ggplot2)
+head(mpg)
+
+# Data types
+
+## Atomic data types -----
+### Numeric (floats/integers)
+class(5)
+class(5L)
+5.00000010010
+5
+
+### Characters (strings)
+class("hello")
+character("5")
+
+### Logical (boolean)
+TRUE
+TRUE <- "We are the champions of R"
+FALSE
+FALSE <- "We are lame"
+
+T
+F
+
+T == TRUE
+T <- "We are the champions of R"
+T
+T == TRUE
+if ((5 > 0) == T){
+  print("YES")
+}
+T <- TRUE
+if ((5 > 0) == T){
+  print("YES")
+}
+
+condtion <- TRUE
+
+test_result <- 131
+condition <- test_result > 100
+condition
+
+
+### Vector
+number <- 1
+length(number)
+
+numbers <- 1:10
+class(numbers)
+length(numbers)
+
+## Complex data types
+
+### List
+me <- list(name="Lukas", age=30, teaching=TRUE)
+me_name <- "Lukas"
+me_age <- 30
+me_teaching <- TRUE
+
+#### Accessing lists
+me[["name"]]
+me[["age"]]
+me[["teaching"]]
+
+me[[1]]
+me[[2]]
+me[[3]]
+
+me$name
+me$age
+me$teaching
+
+### Task - Setup a list
+year <- list()
+#n_days (num)
+#n_weeks (num)
+#n_months (num)
+#favorite_month (char)
+#favorite_day (char)
+#good_year (logical)
+
+days_10_years <- 10 * .....
+weeks_in_year <- round(...../....., 0)
+favorite_january <- ..... == "January"
+favorite_Monday <- ..... == "Monday"
+
+
+cty_man_aov <- aov(cty ~ manufacturer, mpg)
+cty_man_aov$coefficients
+
+
+### Data Frame
