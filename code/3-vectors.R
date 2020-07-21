@@ -107,12 +107,11 @@ letters[1:5]
 
 letters[c(1,1,2,1,1)]
 
-
 # Select all mondays from the weekdays_10
 weekdays_10[c(1, 8)]
 # select Prague from cities
 # Select Prague 10 times
-"Prague" "Prague". .....
+# "Prague" "Prague", .....
 # select all FALSE from true_false
 # select all black NUMBERS from the rouletter numbers
 # What color is number 0
@@ -121,4 +120,7 @@ roulette_colors[1]
 roulette_numbers
 roulette_colors[11]
 
-
+RNGkind(sample.kind = "Rejection")
+RNGkind(sample.kind = "default")
+set.seed(666)
+sample(roulette_numbers, 10, replace = TRUE)

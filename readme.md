@@ -35,3 +35,10 @@ https://www.r-pkg.org/
 [Minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
 [Minimal example in R](https://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example)
 [Example of a good question](https://stackoverflow.com/questions/9508518/why-are-these-numbers-not-equal)
+
+### Code Style
+
+https://style.tidyverse.org/
+
+### Interesting information
+- [Trouble with sampling](https://f.briatte.org/r/change-in-sample-function-r-3-6-0)
