@@ -169,23 +169,69 @@ weekdays_10[which(weekdays_10 %in% c("Saturday", "Sunday"))]
 
 
 ## Simplest vector acces with logicals
+## Logical indexing
 cities
 cities == "Paris"
 cities[cities == "Paris"]
 
-# REwrite this not to use WHICH
+# Rewrite this not to use WHICH
 randomized_cities <- sample(cities)
-position <- which(randomized_cities == "Prague")
+position <- randomized_cities == "Prague"
 randomized_cities[position]
-randomized_cities[which(randomized_cities == "Prague")]
+randomized_cities[randomized_cities == "Prague"]
+
+!TRUE
+!position
+randomized_cities[!position]
 
 # Use != to
-# Remove Prague from cities
 cities != "Prague"
-i_not_prague <- which(cities != "Prague")
+i_not_prague <- cities != "Prague"
 cities[i_not_prague]
-# Remove Monday from weekdays
-weekdays[which(weekdays != "Monday")]
-# select all roulette numbers which are not black
-which(roulette_colors != "black") - 1
-roulette_numbers[which(roulette_colors != "black")]
+weekdays[weekdays != "Monday"]
+roulette_numbers[roulette_colors != "black"]
+
+
+### Numeric selection
+temperatures
+# Select temperatures above 37deg
+temperatures[temperatures > 37]
+# How many temperatures above 37deg there are?
+length(temperatures)
+length(temperatures[temperatures > 37])
+
+## Assignments at index
+temperatures[1] <- Inf
+temperatures[c(1,2)] <- NA
+temperatures[1:5] <- 36
+temperatures[temperatures > 40] <- NA
+temperatures[temperatures < 36.5] <- NA
+temperatures[temperatures < 36.5 | temperatures > 40] <- NA
+
+
+## Vector function
+
+head(temperatures)
+tail(temperatures)
+
+sort(temperatures)
+rev(temperatures)
+round(temperatures)
+
+table(roulette_colors)
+unique(roulette_colors)
+
+is.na(temperatures)
+as.numeric(TRUE)
+as.numeric(FALSE)
+
+## Math operations
+mean(temperatures, na.rm = TRUE)
+median()
+sd()
+max()
+min()
+sum()
+range(temperatures)
+quantile()
+
