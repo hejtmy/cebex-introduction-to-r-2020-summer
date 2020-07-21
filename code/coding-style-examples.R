@@ -30,11 +30,14 @@ ls_person$name
 is.numeric()
 as.character(5)
 
+
+## Assignmens should be with <-
 NiceColor = "blue"
 nice_color <- "blue"
 
 nicecolor = "red"
 
+## Beware of setting T to sth. else
 TRUE == T
 T <- "pink"
 TRUE == T

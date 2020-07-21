@@ -11,7 +11,6 @@ street%name.R
 00_sets.R
 
 ## Variable naming
-
 name_variable
 name_variable
 .7variable
