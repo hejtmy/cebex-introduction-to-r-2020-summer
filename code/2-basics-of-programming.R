@@ -285,6 +285,50 @@ as.numeric("float")
 (logicals) == (numbers) -> "character"
 
 
+## Comparisons
+# ==
+a = 5
+a == 5
+
+TRUE == T
+"hey" == "hello"
+"hello" == "hello"
+
+# !=
+a != 5
+"hey" != "hello"
+
+# %in%
+5 %in% 1:10
+0 %in% 1:10
+
+"hey" %in% c("hello", "hey")
+
+# > | >= | < | <=
+
+5 > 0
+5 > 5
+5 >= 5
+5 < 5
+5 <= 5
+5 < 10
+
+
+# AND &
+1:10 > 5 
+1:10 < 8
+
+1:10 > 5 & 1:10 < 8
+which(1:10 > 5 & 1:10 < 8)
+
+# OR |
+1:10 > 8
+1:10 < 5
+
+1:10 > 8 | 1:10 < 5
+which(1:10 > 8 | 1:10 < 5)
+
+
 ## Comments
 # This is a single line comment
 

@@ -49,7 +49,7 @@ roulette_numbers <- 0:36
 # Create vector called roulette_colors with “green” and then 18 times “red” and “black”
 roulette_colors <- c("green", rep(c("red", "black"), 18))
 # create vector called weekdays with each day of the week
-weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturady", "Sunday")
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
 # create vector called weekdays_10 which is days in 10 weeks consecutively
 weekdays_10 <- rep(weekdays, 10) # CAN BE SIMPLIFiED
 # Crete vector of odd numbers call odd_numbers with numbers from 1 to 99
@@ -107,20 +107,85 @@ letters[1:5]
 
 letters[c(1,1,2,1,1)]
 
+cities[-4]
+cities[c(-3,-5)]
+cities[-c(3,5)]
+
 # Select all mondays from the weekdays_10
-weekdays_10[c(1, 8)]
+weekdays_10[seq(1,70,7)]
 # select Prague from cities
+cities
+cities[3]
 # Select Prague 10 times
-# "Prague" "Prague", .....
+cities[rep(3,10)]
 # select all FALSE from true_false
+true_false[seq(2,length(true_false),2)]
 # select all black NUMBERS from the rouletter numbers
+roulette_colors[seq(3,length(roulette_colors),2)]
 # What color is number 0
 roulette_colors[1]
 # set seed to 100, randomize 10 roulette numbers and get their colors
-roulette_numbers
-roulette_colors[11]
+set.seed(100)
+winning_numbers <- sample(roulette_numbers, 10, replace = TRUE)
+roulette_colors[winning_numbers + 1]
 
-RNGkind(sample.kind = "Rejection")
-RNGkind(sample.kind = "default")
-set.seed(666)
-sample(roulette_numbers, 10, replace = TRUE)
+
+## Want to select specific items
+# wanna select prague
+"Prague" == "Prague"
+cities[3] == "Prague"
+cities
+cities == "Prague"
+which(cities == "Prague")
+which(c("Prague", cities)== "Prague")
+i_prague <- which(cities == "Prague")
+cities[i_prague]
+
+sample(cities)[1]
+
+randomized_cities <- sample(cities)
+position <- which(randomized_cities == "Prague")
+randomized_cities[position]
+randomized_cities[which(randomized_cities == "Prague")]
+
+randomized_cities[-position]
+randomized_cities[-which(randomized_cities == "Prague")]
+
+# !=
+# Use != to
+# Remove Prague from cities
+cities != "Prague"
+i_not_prague <- which(cities != "Prague")
+cities[i_not_prague]
+# Remove Monday from weekdays
+weekdays[which(weekdays != "Monday")]
+# select all roulette numbers which are not black
+which(roulette_colors != "black") - 1
+roulette_numbers[which(roulette_colors != "black")]
+
+# %in%
+# Select all weekend days from weekdays_10
+weekdays_10[which(weekdays_10 %in% c("Saturday", "Sunday"))]
+
+
+## Simplest vector acces with logicals
+cities
+cities == "Paris"
+cities[cities == "Paris"]
+
+# REwrite this not to use WHICH
+randomized_cities <- sample(cities)
+position <- which(randomized_cities == "Prague")
+randomized_cities[position]
+randomized_cities[which(randomized_cities == "Prague")]
+
+# Use != to
+# Remove Prague from cities
+cities != "Prague"
+i_not_prague <- which(cities != "Prague")
+cities[i_not_prague]
+# Remove Monday from weekdays
+weekdays[which(weekdays != "Monday")]
+# select all roulette numbers which are not black
+which(roulette_colors != "black") - 1
+roulette_numbers[which(roulette_colors != "black")]
