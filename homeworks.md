@@ -18,7 +18,7 @@ Choose a letter of the alphabet randomly and find somewhat relevant package at h
     a. what the package is about?
     b. What is the typical usecase fo the package.
     c. Did you understand the documentation? If not, why was it difficult to understand? What was easy to understand?
-    
+
 ### Asking for help
 Name the file [name]-asking-for-help.pdf
 
@@ -52,3 +52,49 @@ value2 =7
 value3= round(value/ value2 , digits=0)
 message= paste('Year has ', value , ' days. Each week has ', value 2, ' days. This means that the year has ',value3,' weeks.')
 ```
+
+### Working with vectors
+Name the file [your-name]-zodiac-vectors.R.
+
+Put all the code inside the R file. You don't need to actually answer the questions, just submit code which will correctly calculate them.
+
+Each of these should be written in code on a single line.
+
+1. Create a vector of years between 1924 to 2020
+2. Create a vector of chinese zodiac for each year, beginning with rat, repeating 10 times (120 years).
+3. Shorten the zodiac vector so it is only of the same length as the years vector. (Select only certain values)
+4. What years are “horse” years?
+5. What sign was year 1987?
+6. What is the sum of years for the “rooster”?
+7. What is the median year for the “dragon”
+8. What is the 3rd_year of a goat?
+
+### Creating custom dataset
+Name the file [your-name]-custom-dataset.R.
+
+Put all the code inside the R file. You don't need to actually answer the questions, just submit code which will correctly calculate them.
+
+1. Create a data.frame with three columns - day, month, week, weekday, day_of_the_week
+2. Set the day to 1:365
+3. Set the months to their respective months - it is non skip year, 365 days
+4. Set the week to properly calculate weeks (each 7 days. not respecting months) and weekday to be 1-7
+5. Set the day_of_the_week to follow the days of the week - Monday, Tuesday etc.
+6. Set seed to 2020 and randomize a column world_happinness to have normal distribution with average 10 and sd 2.
+7. Select rows which contain only mondays.
+8. What is the average happiness on Mondays?
+9. What is the average happiness in the 40th week?
+
+### Analysing iris dataset
+
+Name the file [your-name]-iris-exploration.R. 
+
+Put all the code inside the R file. You don't need to actually answer the questions, just submit code which will correctly calculate them.
+
+1. Read about the iris dataset (`?iris`)
+2. Investigate the dataset using head, str, tail etc.
+3. what types of variables the columns are?
+4. Does the dataset have rownames? If yes, what are those?
+5. What si the median, mean and variance of Sepal.Width?
+6. Get the mean Sepal.Length of virginica?
+7. What is the min and max of Petal.Length fo Setosa?
+8. What are the counts of various Species which have Sepal length above 5?

@@ -17,7 +17,7 @@ This course is aimed at people with little to no knowledge of programming in R l
 
 
 ## Discord server
-https://discord.gg/8P9Nwd
+https://discord.gg/tqKezAY
 
 ## External resources
 
