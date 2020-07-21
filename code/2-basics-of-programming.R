@@ -109,17 +109,17 @@ hist(rnorm(1000, 100, 25, 10), breaks = 20) #FAILS because only takes 3 argument
 # rnorm(n, mean = 0, sd = 1)
 hist(rnorm(1000), breaks=20)
 # mean = 0, sd = 25
-hist(rnorm(1000, 0, 25), breaks=20)
-hist(rnorm(1000, mean = 0, sd = 25), breaks=20)
-hist(rnorm(1000, sd = 25), breaks=20)
+hist(rnorm(1000, 0, 25), breaks = 20)
+hist(rnorm(1000, mean = 0, sd = 25), breaks = 20)
+hist(rnorm(1000, sd = 25), breaks = 20)
 
 # mean = 100, sd = 1
-hist(rnorm(1000, 100, 1), breaks=20)
+hist(rnorm(1000, 100, 1), breaks = 20)
 hist(rnorm(1000, mean = 100, sd = 1), breaks=20)
-hist(rnorm(1000, mean = 100), breaks=20)
+hist(rnorm(1000, mean = 100), breaks = 20)
 
-hist(rnorm(1000, sd=25), breaks=20)
-hist(rnorm(1000, 0, 25), breaks=20)
+hist(rnorm(1000, sd = 25), breaks = 20)
+hist(rnorm(1000, 0, 25), breaks = 20)
 
 seq(1,10,1)
 seq(from = 1,to = 10, by = 1)
@@ -251,7 +251,6 @@ mean(c(person2, person1), na.rm = TRUE)
 
 NULL
 
-
 ## What type it is
 class(5)
 is.na(NA)
@@ -272,7 +271,6 @@ as.logical(5)
 as.logical(-210)
 as.logical("ghuas")
 
-
 ## Implicit conversion
 
 abs("five")
@@ -285,3 +283,11 @@ as.numeric(TRUE)
 as.numeric("float")
 
 (logicals) == (numbers) -> "character"
+
+
+## Comments
+# This is a single line comment
+
+#' Multiline comment
+#' There is no benefit except it creates new multilines for me
+#' and also signifies to be part of the same comment

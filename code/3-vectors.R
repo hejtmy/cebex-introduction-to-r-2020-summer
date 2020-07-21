@@ -11,19 +11,19 @@ numbers2 <- c(1,3,5,7,9,11,13,15,17,19) # odd number from 1-19
 all_numbers <- c(numbers1, numbers2)
 
 # Sequence ---------
-numbers100 <- seq(1,100)
+numbers100 <- seq(1, 100)
 numbers100 <- seq(to=100)
 
 all(seq(1,100) == seq(to=100))
 
 ?seq
-seq(from=1,to=100,by=2) # Odd numbers from 1 to 100
+seq(from=1, to=100, by=2) # Odd numbers from 1 to 100
 
-seq(0,1,length.out = 25) # 25 values between 0 and 1
+seq(0, 1, length.out = 25) # 25 values between 0 and 1
 
 # Repeat ----------
 ?rep
-ten_tens <- rep(10,10)
+ten_tens <- rep(10, 10)
 
 # "test","test" (10 times), "control", "control" (10 times).... (length 20)
 c(rep("test", 10), rep("control", 10))
@@ -34,13 +34,26 @@ condition
 
 ## Task
 
-# Create vector of 5 cities called cities with 5 EU capitals. It must include Prague
-# Create vector temperatures of human temperature from 36.3 to 40.5 with 0.1 steps
-# create vector roulette_numbers with numbers from 0 to 36
-# Create vector called roulette_colors with “green” and then 18 times “red” and “black”
 
+# Create vector of 5 cities called cities with 5 EU capitals. It must include Prague
+cities <- c("Madrid", "Berlin", "Prague", "Paris", "Bratislava")
+# Create vector temperatures of human temperature from 36.3 to 40.5 with 0.1 steps
+seq()
+# create vector roulette_numbers with numbers from 0 to 36
+seq()
+roulette_numbers <- c(seq(0,36,1)) # SOMETHING EXTRA
+# Create vector called roulette_colors with “green” and then 18 times “red” and “black”
 roulette_colors <- c("green", rep(c("red", "black"), 18))
 # create vector called weekdays with each day of the week
+c()
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Saturady", "Sunday")
 # create vector called weekdays_10 which is days in 10 weeks consecutively
+rep()
+weekdays_10 <- rep(c("Monday", "Tuesday", "Wednesday", "Thursday", "Saturady", "Sunday"),10) # CAN BE SIMPLIFiED
 # Crete vector of odd numbers call odd_numbers with numbers from 1 to 99
+seq()
 # Create vector of length 100 called true_false (T, F, T, F, T, F, T, F …)
+length_100 <- rep(c("T", "F"), 100)
+true_false <- rep()
+
+## Randomizing
