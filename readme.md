@@ -19,6 +19,9 @@ This course is aimed at people with little to no knowledge of programming in R l
 ## Discord server
 https://discord.gg/tqKezAY
 
+## Happiness dataset
+https://www.kaggle.com/unsdsn/world-happiness
+
 ## External resources
 
 ### Package sources

@@ -71,7 +71,16 @@ df_example_dec <- read.table(file.path("data", "loading-examples", "example-dec.
                          sep=";", stringsAsFactors = FALSE, dec = ",")
 
 
-# Load the exmaple-row.txt
+# Load the example-row.txt
+# if it has more field than variable names, consider the first one as a row name
+df_example_row <- read.table(file.path("data", "loading-examples", "example-row.txt"),
+                             sep = ";", header = TRUE)
+rownames(df_example_row)     
 
+read.table()
+write.table(df_example_sep, file = "example-sep-out.txt", sep = ",", dec = ".",
+            row.names = TRUE)
 
-
+# Saving files
+## Beware of row names
+write.table(USArrests, file = "arrests.txt", sep = ";", row.names = FALSE)
