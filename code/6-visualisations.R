@@ -79,4 +79,21 @@ hist(df_2017$corruption,
 hist(df_2017$corruption, xlim = c(0.0, 0.15), breaks = 25) 
 
 ## Create a histogram between 0 an 0.15 with at 15 breaks
+# hist_breaks <- 0.00,0.01,0.02,0.03,.....0.015, 100
+hist_breaks <- c(seq(0, 0.15, by = 0.01), 100)
+hist(df_2017$corruption, xlim = c(0.0, 0.15), breaks = hist_breaks,
+     ylab= "Frequency",
+     xlab = "Corruption score",
+     main = "Corruption factor in countries happines in 2017 (limited to 0-0.15)")
 
+## 
+hist(df_2017$social_support[df_2017$social_support > 0.5],
+     breaks=25, col="#4a1989", border="#eed3bb")
+
+## Create a histogram of Scores in 2017
+# Label axes properly
+# color the graph nicely (change both col and border)
+# set the breaks to something else than default
+# focus only on values between 4 and 6
+
+?colors
