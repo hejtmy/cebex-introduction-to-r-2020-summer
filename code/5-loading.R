@@ -1,6 +1,13 @@
 ##
 list.files()
 
+# \ escape character
+cat("hello\n\t this \n is\n me")
+f <- "C:/Users/Lukas"
+f <- "C:\\Users\\Lukas"
+file.path("C:", "Users", "Lukas")
+file.path("C:\Users")
+
 ## Working directory
 getwd()
 list.files()
