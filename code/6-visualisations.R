@@ -177,7 +177,7 @@ barplot(tab_year_GDP, beside = TRUE,
         names.arg = colnames(tab_year_GDP),
         legend=rownames(tab_year_GDP),
         col = c("yellow", "red", "green", "blue", "pink"),
-        main = "Counts of countries with GDP > 1 in each year")
+        main = "Counts of countries with GDP > 1 in each year",
+        horiz = TRUE)
 
-
-## 
+## Multiple plots
