@@ -91,9 +91,93 @@ hist(df_2017$social_support[df_2017$social_support > 0.5],
      breaks=25, col="#4a1989", border="#eed3bb")
 
 ## Create a histogram of Scores in 2017
+hist(df_2017$score)
 # Label axes properly
+hist(df_2017$score, main="Happiness scores in 2017", xlab="Score", ylab="")
 # color the graph nicely (change both col and border)
-# set the breaks to something else than default
+hist(df_2017$score, main="Happiness scores in 2017", xlab="Score", ylab="",
+     col="#4a1989", border="#eed3bb")
 # focus only on values between 4 and 6
+hist(df_2017$score[df_2017$score > 4 & df_2017$score < 6], 
+     main="Happiness scores in 2017", xlab="Score", ylab="",
+     col="#4a1989", border="#eed3bb", breaks = 20)
 
-?colors
+
+## Boxplots
+boxplot(df_2017$score)
+boxplot(df_2017$score, df_2017$corruption)
+boxplot(df_2017$freedom, df_2017$corruption, df_2017$health,
+        names = c("Freedom", "Corruption", "Health"))
+
+boxplot(df_2017$freedom, df_2017$corruption, df_2017$health,
+        names = c("Freedom", "Corruption", "Health"), 
+        col=c("grey", "white", "yellow"), border="black",
+        width = c(0.2, 1, 0.3))
+
+### FORMULA
+boxplot(GDP ~ (score > 6), data=df_2017)
+boxplot(GDP ~ year, data=df_happiness, main="QUARTILES of GPD per year")
+
+## Scatter plots (point charts)
+plot(df_2017$GDP, df_2017$score)
+cor(df_2017$GDP, df_2017$score)
+
+##
+plot(df_2017$GDP, df_2017$score)
+plot(df_2017$GDP, df_2017$score)
+
+## Type Line
+plot(df_2017$GDP, df_2017$score)
+plot(rownames(datasets::airquality), datasets::airquality$Temp, type="p")
+plot(rownames(datasets::airquality), datasets::airquality$Temp, type="l")
+
+## Type of points
+?points
+plot(df_2017$score, df_2017$GDP, pch=16)
+
+## Adding in features
+points(df_2017$score, df_2017$freedom, pch=11, col="green")
+points(df_2017$score, df_2017$health, pch=22, bg="yellow", col="pink")
+
+
+## PAIRS
+pairs(df_2017[, 3:9])
+
+
+## Adding regression lines
+lm_score_gdp <- lm(score ~ GDP, data = df_2017)
+summary(lm_score_gdp)
+plot(df_2017$GDP, df_2017$score)
+abline(lm_score_gdp)
+panel.smooth(df_2017$GDP, df_2017$score, lwd=2)
+
+## Create a scatter plot of GDP on x axis and score on Y axis for year 2017
+# Add "red" points to the plot for the year 2018
+plot(df_2017$GDP, df_2017$score)
+df_2018 <- df_happiness[df_happiness$year == 2018, ]
+lm_score_gdp_2017 <- lm(score ~ GDP, data = df_2017)
+lm_score_gdp_2018 <- lm(score ~ GDP, data = df_2018)
+points(df_2018$GDP, df_2018$score, col="red")
+abline(lm_score_gdp_2017)
+abline(lm_score_gdp_2018, col="red")
+
+plot # creates new
+hist # creates new 
+boxplot #creates
+
+
+## Bar charts
+tab_year <- table(df_happiness$year)
+tab_year
+barplot(tab_year)
+
+tab_year_GDP <- table(df_happiness$year, df_happiness$GDP > 1)
+tab_year_GDP
+barplot(tab_year_GDP, beside = TRUE,
+        names.arg = colnames(tab_year_GDP),
+        legend=rownames(tab_year_GDP),
+        col = c("yellow", "red", "green", "blue", "pink"),
+        main = "Counts of countries with GDP > 1 in each year")
+
+
+## 
