@@ -102,6 +102,11 @@ hist(df_2017$score[df_2017$score > 4 & df_2017$score < 6],
      main="Happiness scores in 2017", xlab="Score", ylab="",
      col="#4a1989", border="#eed3bb", breaks = 20)
 
+## Histogram with density lines
+hist(df_2017$score, probability = TRUE)
+lines(density(df_2017$score), col="green", lwd = 3, lty = 2)
+lines(density(df_2017$score), col="red", lwd = 3, lty = 2)
+polygon(density(df_2017$score), col="red", border="blue")
 
 ## Boxplots
 boxplot(df_2017$score)
@@ -122,7 +127,7 @@ boxplot(GDP ~ year, data=df_happiness, main="QUARTILES of GPD per year")
 plot(df_2017$GDP, df_2017$score)
 cor(df_2017$GDP, df_2017$score)
 
-##
+## 
 plot(df_2017$GDP, df_2017$score)
 plot(df_2017$GDP, df_2017$score)
 
@@ -142,7 +147,6 @@ points(df_2017$score, df_2017$health, pch=22, bg="yellow", col="pink")
 
 ## PAIRS
 pairs(df_2017[, 3:9])
-
 
 ## Adding regression lines
 lm_score_gdp <- lm(score ~ GDP, data = df_2017)
@@ -175,9 +179,74 @@ tab_year_GDP <- table(df_happiness$year, df_happiness$GDP > 1)
 tab_year_GDP
 barplot(tab_year_GDP, beside = TRUE,
         names.arg = colnames(tab_year_GDP),
+        legend = rownames(tab_year_GDP),
+        col = c("yellow", "red", "green", "blue", "pink"),
+        main = "Counts of countries with GDP > 1 in each year",
+        horiz = TRUE)
+
+
+## Adding legends
+plot(df_2017$GDP, df_2017$score, pch=10,
+     xlab = "GDP", ylab="Score", col="blue")
+df_2018 <- df_happiness[df_happiness$year == 2018, ]
+lm_score_gdp_2017 <- lm(score ~ GDP, data = df_2017)
+lm_score_gdp_2018 <- lm(score ~ GDP, data = df_2018)
+points(df_2018$GDP, df_2018$score, col="red", pch=2)
+abline(lm_score_gdp_2017)
+abline(lm_score_gdp_2018, col="red")
+legend("topleft", pch = c(10,2),
+       col = c("blue", "red"), legend = c("2017", "2018"),
+       cex = 2)
+
+## Multiple plots
+par(mfrow = c(1,2)) # first two plots are going to be next to each other
+
+## PLOT 1
+plot(df_2017$score, df_2017$GDP, pch=16)
+## PLOT 2
+plot(df_2017$GDP, df_2017$score)
+df_2018 <- df_happiness[df_happiness$year == 2018, ]
+lm_score_gdp_2017 <- lm(score ~ GDP, data = df_2017)
+lm_score_gdp_2018 <- lm(score ~ GDP, data = df_2018)
+points(df_2018$GDP, df_2018$score, col="red")
+abline(lm_score_gdp_2017)
+abline(lm_score_gdp_2018, col="red")
+
+
+par(mfrow = c(1,2)) # first two plots are going to be next to each other
+## PLOT 1
+hist(df_2017$social_support[df_2017$social_support > 0.5],
+     breaks=25, col="#4a1989", border="#eed3bb")
+## PLOT 2
+barplot(tab_year_GDP, beside = TRUE,
+        names.arg = colnames(tab_year_GDP),
         legend=rownames(tab_year_GDP),
         col = c("yellow", "red", "green", "blue", "pink"),
         main = "Counts of countries with GDP > 1 in each year",
         horiz = TRUE)
 
-## Multiple plots
+par(bg="black", mfrow=c(1,1), col.axis="white", col.lab="white")
+hist(df_2017$social_support[df_2017$social_support > 0.5],
+     breaks=25, col="#4a1989", border="#eed3bb",
+     xlab="Social support score")
+
+par(bg="white", mfrow=c(1,1), col.axis="black", col.lab="black")
+hist(df_2017$social_support[df_2017$social_support > 0.5],
+     breaks=25, col="#4a1989", border="#eed3bb",
+     xlab="Social support score")
+
+## Adding common titles
+## Outer margin
+par(mfrow = c(1,2), oma=c(0,0,2,0))
+hist(df_2017$social_support, breaks=25, col="#4a1989", 
+     border="#eed3bb", main="")
+plot(df_2017$social_support, df_2017$score)
+mtext("Effect of social support on Score", outer = TRUE, cex = 2, padj = 1)
+
+par(mfrow = c(2,2), oma=c(0,0,2,0))
+hist(df_2017$social_support, breaks=25, col="#4a1989", 
+     border="#eed3bb", main="")
+plot(df_2017$social_support, df_2017$score)
+mtext("Effect of social support on Score", outer = TRUE, cex = 2, padj = 1)
+
+

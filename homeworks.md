@@ -111,7 +111,7 @@ All plots should be legible
 5. Add linear regression abline with width of 3. 
 6. Image 4 contains boxplots of GDP and Score values - set the color of the outline and other graph setting
 ![](img/multiple-1.png)
-
+  
 ### Inferential plots
 
 Name the file [your-name]-inferential-plots.R
