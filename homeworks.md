@@ -1,6 +1,6 @@
 # Homeworks
 
-All homeworks are due by Friday. Upload all the homeworks to the https://e.pcloud.com/#page=puplink&code=U1Zoyd8ePgsJm8nmpakPSlgI5aCWx9X
+All homeworks are due by Friday 11.59 PM CET. Upload all the homeworks to the https://e.pcloud.com/#page=puplink&code=U1Zoyd8ePgsJm8nmpakPSlgI5aCWx9X
 
 ## Day 1
 
@@ -88,11 +88,11 @@ Put all the code inside the R file. You don't need to actually answer the questi
 
 Name the file [your-name]-iris-exploration.R. 
 
-Put all the code inside the R file. You don't need to actually answer the questions, just submit code which will correctly calculate them.
+Put all the code inside the R file. You don't need to actually answer all the questions (except question 3), just submit code which will correctly calculate them.
 
 1. Read about the iris dataset (`?iris`)
 2. Investigate the dataset using head, str, tail etc.
-3. what types of variables the columns are?
+3. What types of variables the columns are?
 4. Does the dataset have rownames? If yes, what are those?
 5. What si the median, mean and variance of Sepal.Width?
 6. Get the mean Sepal.Length of virginica?

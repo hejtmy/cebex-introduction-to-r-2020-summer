@@ -69,7 +69,6 @@ df_murder[, "UrbanPop"]
 df_murder[, c(1, 4)]
 df_murder[, c("Murder", "UrbanPop")]
 
-
 df_murder[1, 1]
 
 ## What index is Hawaii at?
@@ -134,6 +133,7 @@ i_test <- df_murder$Assault >= top_10_cutoff_assault &
             df_murder$Murder >= top_10_cutoff_murder &
             df_murder$UrbanPop < urban_pop_average
 df_murder[i_test, ]
+
 
 # Creating custom data frames --------
 df_custom <- data.frame(names="Lukas", children="Lukas 2")
