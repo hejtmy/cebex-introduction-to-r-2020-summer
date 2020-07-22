@@ -110,7 +110,7 @@ All plots should be legible
 4. Image two should be a scatter plot of GDP ~ Score. Set point type to be a square and it's color is white.
 5. Add linear regression abline with width of 3. 
 6. Image 4 contains boxplots of GDP and Score values - set the color of the outline and other graph setting
-![](https://github.com/hejtmy/cebex-introduction-to-r-2020-summer/blob/master/img/multiple-1?raw=true)
+![](img/multiple-1.png)
 
 ### Inferential plots
 
@@ -118,9 +118,9 @@ Name the file [your-name]-inferential-plots.R
 
 1. Load data ggplot2::mpg
 2. Plot histograms of compact cars and pickups hightway speeds next to each other. Define breaks to be same in both cases. Bonus points - label and color them appropriately add density lines to both
-![](https://github.com/hejtmy/cebex-introduction-to-r-2020-summer/blob/master/img/inf-1?raw=true)
+![](img/inf-1.png)
 3. Calculate mean city speed for midsize and suv cars and plot them side by side using barplot. Label and color them appropriately
-![](https://github.com/hejtmy/cebex-introduction-to-r-2020-summer/blob/master/img/inf-2?raw=true)
+![](img/inf-2.png)
 4. Create pairs scatterplots of city speed, highway speed and displacement and color points using the class. Plot only compact, 2seater and minivans. For bonus points (which might require you to do a bit of googling), add legend to the plot determining colors of each of car classes.
-![](https://github.com/hejtmy/cebex-introduction-to-r-2020-summer/blob/master/img/inf-3?raw=true)
+![](img/inf-3.png)
 
