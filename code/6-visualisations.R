@@ -54,12 +54,29 @@ str(df_2017)
 ### Histogram
 hist(df_2017$GDP)
 summary(df_2017$GDP)
-hist(df_2017$GDP, breaks = 20)
+hist(df_2017$GDP, breaks = 20) # makes 20 linearly separated "bins"
+hist(df_2017$GDP, breaks = c(0,1,2)) # separates values into blocks 0-1 and 1-2
+hist(df_2017$GDP, breaks = c(1,2)) # Crashes because it doesn't know what to do with data between 0 and 1
 hist_breaks <- seq(1, 2, by = 0.1)
-hist(df_2017$GDP, breaks = c(0, hist_breaks))
+hist(df_2017$GDP, breaks = c(0, hist_breaks)) # define custom breaks
 
 library(ggplot2)
 g <- ggplot(df_happiness, aes(x=GDP)) +
   geom_histogram(binwidth = 0.1) +
   xlab("GDP in a Coutry")
+
+## Make a histogram of 2017 data of corruption
+hist_breaks <- seq(min(df_2017$corruption), max(df_2017$corruption), length.out = 25)
+hist(df_2017$corruption, breaks = hist_breaks)
+hist(df_2017$corruption, breaks = 25)
+# Change the X label to a good name
+hist(df_2017$corruption, 
+     breaks = 25,
+     main = "Corruption factor in countries happines in 2017",
+     xlab = "Corruption score",
+     ylab = "")
+# only focus on 0.1 and 0.15
+hist(df_2017$corruption, xlim = c(0.0, 0.15), breaks = 25) 
+
+## Create a histogram between 0 an 0.15 with at 15 breaks
 
